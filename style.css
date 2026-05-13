@@ -1,0 +1,89 @@
+:root {
+  --red-color: #FF0000;
+  --blue-color: #0000FF;
+  --green-color: #00FF00;
+  --num-columns: 4;
+  --gap: 10px;
+  --row-height: 330px;
+  --padding: 15.63vw;
+}
+
+* {  
+  margin: 0;
+  padding: 0;
+}
+
+  .sobremim{
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+  }
+
+.nav{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    justify-items: center;
+  
+    text-align: center;
+    align-content: center;
+    padding-left: var(--padding);
+    padding-right: var(--padding);
+    background-color: green;
+    column-gap: 0.52vw;
+}
+.nav div{
+    width: 50%;
+}
+.box{
+    background-color: red;
+    object-fit: cover;
+}
+
+.input-group{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.input-field{
+  grid-column: 2fr;
+  width: 100%;
+}
+.fa-solid{
+  grid-column: 1fr;
+}
+.grid_container{
+
+
+    box-sizing: border-box;
+    padding: 1em var(--padding) 0 ;
+
+    display: grid;
+    grid-template-columns: repeat(var(--num-columns), 1fr);
+    grid-auto-rows: var(--row-height);
+    gap: var(--gap);
+
+}
+
+.grid_container > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.img-grid-column-2{
+  grid-column: span 2;
+}
+.img-grid-row-2{
+  grid-row: span 2;
+}
+
+@media (max-width: 1024px) {
+    .sobremim{
+    height: 100vh;
+    object-fit: cover;
+  }
+:root {
+    --num-columns: 2;
+    --row-height: 200px;
+    --padding: 5vw;
+}
+}
